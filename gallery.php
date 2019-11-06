@@ -36,7 +36,7 @@
 	</style>
 	
       <!-- Stylesheet for Masonry -->
-      <link rel="stylesheet" href="Masonry.css">
+      <link rel="stylesheet" href="Masonry/Masonry.css">
 
 </head>
 <body class="w3-content" style="max-width:99%; margin: auto;">
@@ -175,7 +175,7 @@
 	?>
 	
 	<!-- Masonry Scripts -->
-	<script src="masonry.pkgd.min.js"></script>
+	<script src="Masonry/masonry.pkgd.min.js"></script>
 													  	
 </body>
 </html>
