@@ -1,0 +1,13 @@
+.grid {
+    max-width: 1500px;
+}
+
+.grid-item {
+    float: left;
+    max-width: 200px;    max-height: 200px;
+    height: 200px;  width: 200px;
+    border: 2px solid blue;
+    border-radius: 5px;
+    object-fit:cover;
+    margin: 3px;
+}
