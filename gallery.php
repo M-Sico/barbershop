@@ -13,27 +13,31 @@
 	<link rel="stylesheet" href="w3.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Marcellus+SC" rel="stylesheet"> 
-<style>
-a {
-	text-decoration: none;
-}
-a:link {
-    text-decoration: none;
-}
-a:visited {
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: none;
-}
-a:active {
-    text-decoration: none;
-}
-body {
- background-image: url("images/background.jpg");
- background-attachment: fixed;
-}
-</style>
+	<style>
+	a {
+		text-decoration: none;
+	}
+	a:link {
+	    text-decoration: none;
+	}
+	a:visited {
+	    text-decoration: none;
+	}
+	a:hover {
+	    text-decoration: none;
+	}
+	a:active {
+	    text-decoration: none;
+	}
+	body {
+	 background-image: url("images/background.jpg");
+	 background-attachment: fixed;
+	}
+	</style>
+	
+      <!-- Stylesheet for Masonry -->
+      <link rel="stylesheet" href="Masonry/Masonry.css">
+
 </head>
 <body class="w3-content" style="max-width:99%; margin: auto;">
 	<header class="w3-container w3-red w3-section w3-card-24 w3-animate-opacity">
@@ -61,6 +65,17 @@ body {
 	<br />
 	<article class="w3-row w3-red w3-card-24" style="font-family: 'Marcellus SC', serif; margin-bottom: 128px;">
 		<br />
+		
+	<!--====================================================================================================
+		   Currently need to look this part over. Preload with x amount of images?
+		   Then press load more for more pictures? Or something along those lines?
+						   Test Code
+		<div class="grid">
+			<?php
+		 		//moreImages(10);
+			?>
+	 ====================================================================================================-->												   
+														   
 		    <div class="w3-quarter">
 			<?php
                   moreImages(2);
@@ -145,7 +160,10 @@ body {
 	<?php
 		function moreImages($box) {
 			for ($cell = $box-1; $cell <= $box; $cell++) {
+				// Test code:
+				// echo "<div class="grid-item">\n";		
 				echo "<img src=\"images/gallery/".$cell.".jpg\" onClick=\"document.getElementById('".$cell."').style.display='block'\" style=\"width: 100%;\"></img>\n\t";
+				// echo "</div>\n";
 				echo "<div id=\"".$cell."\" class=\"w3-modal\" onClick=\"this.style.display='none'\">\n\t";
 				echo "<div class=\"w3-modal-content\">\n\t";
 				echo "<span class=\"w3-closebtn w3-white w3-hover-red w3-container w3-padding w3-display-topright\">&times;</span>\n\t";
@@ -155,6 +173,9 @@ body {
 			}
 		}
 	?>
-
+	
+	<!-- Masonry Scripts -->
+	<script src="Masonry/masonry.pkgd.min.js"></script>
+													  	
 </body>
 </html>
